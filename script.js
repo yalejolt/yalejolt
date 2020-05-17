@@ -17,7 +17,7 @@ $(function() {
 			$("#main-nav").css("opacity", "1");
 			$("#main-menu").css("grid-column", "1 / 2");
 			$("#toc-menu").css("opacity", "1");
-			$("#sidebar").css("flex", "2.75");
+			$("#sidebar").css("flex", "2.5");
 		}
 	});
 });
