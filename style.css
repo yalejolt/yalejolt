@@ -234,6 +234,11 @@ h6 {
 	flex: 1;
 }
 
+.translation-piece, .original-piece {
+	height: calc(100vh - 80px - 1em); /*subtract top and bottom padding on the pieces and top body margin*/
+	flex: 1;
+}
+
 #essay-left {
 	flex: 4;
 }
@@ -264,7 +269,7 @@ h6 {
 }
 
 #piece-nav-right {
-	display: none;
+	visibility: hidden;
 }
 
 /*NAVIGATION BARS*/
@@ -325,7 +330,11 @@ nav a {
 		display: none;
 	}
 	#piece-nav-right {
-		display: block;
+		visibility: visible;
+	}
+
+	#right-margin {
+		flex: .25;
 	}
 
 	/*hide sidebar*/
@@ -335,7 +344,7 @@ nav a {
 	}
 
 	#main-nav, #toc-menu {
-		opacity: 0;
+		visibility: hidden;
 	}
 
 	#main-menu {
