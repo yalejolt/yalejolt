@@ -1,0 +1,553 @@
+/*FONTS*/
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/NotoSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 500;
+  font-style: italic;
+  src: url(../fonts/NotoSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 700;
+  font-style: italic;
+  src: url(../fonts/NotoSans-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansDisplay-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/NotoSansDisplay-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSansDisplay-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 500;
+  font-style: italic;
+  src: url(../fonts/NotoSansDisplay-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-arabic;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansArabic-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-arabic;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSansArabic-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-arabic;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/NotoSansArabic-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-hebrew;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansHebrew-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-hebrew;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSansHebrew-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-hebrew;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/NotoSansHebrew-Bold.ttf) format("truetype");
+}a
+
+
+/*LANGUAGE FONTS*/
+.trad-chinese {
+	font-family: noto-sans-tc, sans-serif;
+}
+
+.simp-chinese {
+	font-family: noto-sans-sc, sans-serif;
+}
+
+.japanese {
+	font-family: noto-sans-jp, sans-serif;;
+}
+
+.arabic {
+	font-family: noto-sans-arabic, sans-serif;
+	text-align: right;
+}
+
+.hebrew {
+	font-family: noto-sans-hebrew, sans-serif;
+	text-align: right;
+}
+
+/*TYPOGRAPHY*/
+
+body {
+	font-family: noto-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 14px;
+	font-size:calc(11px + .2vw);
+	line-height: 1.4;
+}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+p, h2, a {
+	font-family: noto-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1, .logo, #nav {
+	font-family: noto-sans, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-family: noto-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.toc-entry p {
+	font-size: .9em;
+	line-height: 1.6;
+	margin: 0;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+h2, h3 {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+
+.excerpt {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.logo {
+	font-size: 1em;
+}
+
+#nav {
+	font-size: 1em;
+}
+
+/*STRUCTURE*/
+
+* {
+/*	border: 1px black solid;
+*/}
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px;
+	height: calc(100vh - 85px);
+	overflow: clip;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	height: 30px;
+	margin-bottom: 20px;
+	padding: 0 10px;
+	justify-content: space-between;
+	border-bottom: 1px solid lightgray;
+}
+
+#nav {
+	visibility: visible;
+}
+
+#nav-inner a {
+	margin-left: 15px;
+}
+
+#nav-button {
+	display: none;
+	font-size: 1em;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	height: calc(100% - 50px);
+}
+
+.sidebar {
+	flex: 1.5;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 10px;
+}
+
+.toc-title, .essay-title {
+	height: 100px;
+}
+
+.toc-title {
+	padding-left: 10px;
+}
+
+.toc-entry {
+	margin-bottom: 1em;
+}
+
+#toc-button {
+	display: none;
+	font-size: 1em;
+}
+
+#contents-title {
+	display: none;
+	margin-bottom: 25px;
+	padding-left: 10px;
+}
+
+.essay-nav {
+	padding-left: 10px;
+	/*margin-top: 20px;*/
+}
+
+#toc-text {
+	height: calc(100vh - 300px);
+	overflow: scroll;
+	display: block;
+	padding-right: 5vw;
+}
+
+.toc-entry {
+	display: block;
+	padding-left: 9px;
+	border-left: 1px solid white;
+}
+
+.toc-entry:hover {
+	border-left: 1px solid lightgray;
+}
+
+.toc-selected {
+	border-left: 1px solid lightgray;
+}
+
+#essay {
+	flex: 4;
+	display: flex;
+	flex-direction: row-reverse;
+	overflow: scroll;
+	height: 100%;
+	padding-right: 5vw;
+}
+
+.essay-only {
+	padding: 0 15vw 0 15px;
+	border-left: 1px solid lightgray;
+}
+
+.essay-orig, .essay-trans {
+	flex: 1;
+	padding: 0 15px;
+	/*border-left: 1px solid blue;*/
+}
+
+.essay-border {
+	position: absolute;
+	top: 90px;
+	left: calc(49vw - 271px);
+	width: calc(435px - 2vw);
+	height: calc(100vh - 130px);
+	border-left: 1px solid lightgray;
+	border-right: 1px solid lightgray;
+	z-index: -1;
+}
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1275px) {
+	.essay-border {
+		width: calc(35vw - 39px);
+		left: calc(26vw + 25px);
+	}
+}
+
+/*one-col*/
+@media screen and (max-width: 1000px) {
+	#essay {
+		padding-right: 50px;
+		flex-direction: column;
+		flex: 2;
+	}
+
+	.sidebar {
+		flex: 1.25;
+	}
+
+	.toc-text {
+		padding-right: 50px;
+	}
+
+	.essay-trans {
+		margin-bottom: 50px;
+		border-left: 1px solid lightgray;
+	}
+
+	.essay-orig {
+		border-left: 1px solid lightgray;
+	}
+
+	.essay-only {
+		padding: 0 5vw 0 10px;
+		border-left: 1px solid lightgray;
+	}
+
+	.essay-border {
+		border: none;
+	}
+}
+
+/*navigation overlay*/
+@media screen and (max-width: 750px) {
+	#nav-button{
+		display: inline;
+		z-index: 6;
+	}
+
+	#nav {
+		visibility: hidden;
+		background-color: white;
+		border-left: 1px solid lightgray;
+		height: 100vh;
+		width: 65vw;
+		position: absolute;
+		top:0;
+		right:0;
+		z-index: 5;
+	}
+
+	#nav-inner {
+		height: 100px;
+		width: 200px;
+		margin: 10vh auto;
+		display: flex;
+		flex-direction: column;
+		vertical-align: middle;
+	}
+
+	#nav-inner a {
+		text-align: center;
+		font-size: 20px;
+		margin: 0 50px 0 0;
+	}
+
+	.header {
+		align-items: flex-start;
+	}
+
+	#essay {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 725px) {
+	#essay {
+		padding-right: 0px;
+	}
+}
+
+/*mobile*/
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 16px;
+	}
+
+	.main {
+		display: block;
+	}
+
+	#nav {
+		border: none;
+		width: 100vw;
+	}
+
+	#nav-inner a {
+		margin: 0;
+		
+	}
+
+	.sidebar {
+		justify-content: flex-start;
+		height: 75px;
+	}
+
+	#toc-text {
+		display: none;
+		background-color: white;
+		height: calc(100% - 101px);
+		width: calc(100vw - 100px);
+		position: absolute;
+		top: 75px;
+		left: 0;
+		z-index: 1;
+		margin: 18px 40px 0 40px
+		/*padding: 0;*/
+	}
+
+	.toc-entry {
+		margin: 0 50px 1em 0;
+		width: 40vw;
+	}
+
+	.toc-entry p:last-child {
+		margin-bottom: 25px;
+	}
+
+	.toc-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		height: 30px;
+	}
+
+	.essay-title {
+		height: 75px;
+	}
+
+	#toc-button {
+		display: inline;
+		z-index: 3
+	}
+
+	#essay {
+		height: calc(100vh - 166px);
+		padding-right: 50px;
+	}
+
+	.essay-orig, .essay-trans, .essay-only {
+		padding: 0 10px;
+		border: none;
+	}
+
+	.essay-trans {
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	#essay {
+		padding-right: 25px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.header {
+		height: 40px;
+	}
+
+	.logo {
+		width: 50vw;
+	}
+
+	#essay {
+		padding-right: 0px;
+	}
+
+	#toc-text {
+		top: 85px;
+	}
+}

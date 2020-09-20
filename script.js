@@ -1,62 +1,66 @@
-// hide sidebar
+// mobile menu
 $(function() {
-	var sidebarToggle = 0;
+
+
+	var menuToggle = 0;
 	
-	$("#sidebar-toggle").click(function() {
-		if (sidebarToggle == 0) {
-			sidebarToggle = 1;
-			$("#toggle1").css("background", "black");
-			$("#main-nav").css("opacity", "0");
-			$("#main-menu").css("grid-column", "1 / 3");
-			$("#toc-menu").css("opacity", "0");
-			$("#sidebar").css("flex", "1.25");
+	$("#nav-button").click(function() {
+		if (menuToggle == 0) {
+			menuToggle = 1;
+			$("#nav").css("visibility", "visible");
+			$("#nav-button").html("×");
+			$("#nav-button").css("font-size", "20px");
 		}
 		else {
-			sidebarToggle = 0;
-			$("#toggle1").css("background", "white");
-			$("#main-nav").css("opacity", "1");
-			$("#main-menu").css("grid-column", "1 / 2");
-			$("#toc-menu").css("opacity", "1");
-			$("#sidebar").css("flex", "2.75");
+			menuToggle = 0;
+			$("#nav").css("visibility", "hidden");
+			$("#nav-button").html("Menu");
+			$("#nav-button").css("font-size", "1em");
 		}
 	});
-});
 
-// scroll syncing: 
-// https://stackoverflow.com/questions/9236314/how-do-i-synchronize-the-scroll-position-of-two-divs
-$(function() {
-	var scrollToggle = 1;
-	var isSyncingLeftScroll = false;
-	var isSyncingRightScroll = false;
-	var leftDiv = document.getElementById('original-piece');
-	var rightDiv = document.getElementById('translation-piece');
-		
-	leftDiv.onscroll = function() {
-	  if (!isSyncingLeftScroll && scrollToggle) {
-	    isSyncingRightScroll = true;
-	    rightDiv.scrollTop = this.scrollTop;
-	  }
-	  isSyncingLeftScroll = false;
-	}
+	var tocToggle = 0;
+	
+	$("#toc-button").click(function() {
+		if (tocToggle == 0) {
+			tocToggle = 1;
+			$("#toc-text").css("display", "block");
+			$("#toc-button").html("×");
+			$("#toc-button").css("font-size", "20px");
+			$(".toc-title").css("align-items", "flex-start");
+			$("#contents-title").css("display", "block");
 
-	rightDiv.onscroll = function() {
-	  if (!isSyncingRightScroll && scrollToggle) {
-	    isSyncingLeftScroll = true;
-	    leftDiv.scrollTop = this.scrollTop;
-	  }
-	  isSyncingRightScroll = false;
-	}
-
-	$("#scroll-toggle").click(function() {
-		if (scrollToggle == 1) {
-			scrollToggle = 0;
-			$("#toggle2").css("background", "white");
 		}
 		else {
-			scrollToggle = 1;
-			$("#toggle2").css("background", "black");
-			leftDiv.scrollTop = rightDiv.scrollTop;
+			tocToggle = 0;
+			$("#toc-text").css("display", "none");
+			$("#toc-button").html("Contents");
+			$("#toc-button").css("font-size", "1em");
+			$(".toc-title").css("align-items", "baseline");
+			$("#contents-title").css("display", "none");
 		}
 	});
-});
 
+	$(window).on('resize', function(){
+    	var win = $(this); //this = window
+    	if (win.width() >= 750) {
+    		$("#nav").css("visibility", "visible");
+    	}
+    	else {
+    		$("#nav").css("visibility", "hidden");
+    		$("#nav-button").html("Menu");
+    		$("#nav-button").css("font-size", "1em");
+    	}
+
+    	if (win.width() >= 600) {
+    		$("#toc-text").css("display", "block");
+    	}
+    	else {
+    		$("#toc-text").css("display", "none");
+			$("#toc-button").html("Contents");
+			$("#toc-button").css("font-size", "1em");
+			$(".toc-title").css("align-items", "baseline");
+			$("#contents-title").css("display", "none");
+    	}
+	});
+});

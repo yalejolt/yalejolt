@@ -1,0 +1,465 @@
+/*FONTS*/
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/NotoSans-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 500;
+  font-style: italic;
+  src: url(../fonts/NotoSans-MediumItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/NotoSans-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans;
+  font-weight: 700;
+  font-style: italic;
+  src: url(../fonts/NotoSans-BoldItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansDisplay-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 400;
+  font-style: italic;
+  src: url(../fonts/NotoSansDisplay-Italic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSansDisplay-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-display;
+  font-weight: 500;
+  font-style: italic;
+  src: url(../fonts/NotoSansDisplay-MediumItalic.ttf) format("truetype");
+}
+
+/*LANGUAGE FONTS*/
+.trad-chinese {
+	font-family: noto-sans-tc, sans-serif;
+}
+
+/*TYPOGRAPHY*/
+
+body {
+	font-family: noto-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 15px;
+	font-size:calc(10px + .3vw);
+	line-height: 1.4;
+}
+
+i, em {
+	font-style: italic;
+}
+
+b, strong {
+	font-weight: 700;
+}
+
+p, h2, a {
+	font-family: noto-sans, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1, .logo, #nav {
+	font-family: noto-sans, sans-serif;
+	font-weight: 500;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	font-family: noto-sans, sans-serif;
+	font-weight: 700;
+	font-style: normal;
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.toc-entry p {
+	margin: 0;
+}
+
+.essay-text p:last-child {
+	margin-bottom: 25px;
+}
+
+h1 {
+	font-size: 1.2em;
+}
+
+h2, h3 {
+	font-size: 1em;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+a:hover {
+	color: gray;
+}
+
+.excerpt {
+	padding-left: 2em;
+	padding-right: 2em;
+}
+
+.right-align {
+	text-align: right;
+}
+
+.logo {
+	font-size: 1em;
+}
+
+#nav {
+	font-size: 1em;
+}
+
+/*STRUCTURE*/
+
+* {
+/*	border: 1px black solid;*/
+}
+
+body {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 40px;
+	height: calc(100vh - 85px);
+	overflow: clip;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	align-items: baseline;
+	height: 30px;
+	margin-bottom: 20px;
+	justify-content: space-between;
+	
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.header-outer {
+	position: absolute;
+	top: 40px;
+	left: 0;
+	width: 100%;
+	padding: 0 10px;
+	border-bottom: 1px solid gray;
+	background-color: white;
+}
+
+#nav {
+	visibility: visible;
+}
+
+#nav-inner a {
+	margin-left: 15px;
+}
+
+#nav-button {
+	display: none;
+	font-size: 1em;
+}
+
+.main {
+	display: flex;
+	flex-direction: row;
+	height: calc(100% - 120px);
+	position: absolute;
+	top: 70px;
+}
+
+.sidebar {
+	flex: 1;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-right: 10px;
+	padding-top: 25px;
+
+}
+
+.toc-title, .essay-title {
+	height: 100px;
+
+}
+
+.toc-title {
+	padding-left: 10px;
+}
+
+.toc-entry {
+	margin-bottom: 1em;
+}
+
+#toc-button {
+	display: none;
+	font-size: 1em;
+}
+
+#contents-title {
+	display: none;
+	margin-bottom: 25px;
+	padding-left: 10px;
+}
+
+.essay-nav {
+	padding-left: 10px;
+	/*margin-top: 20px;*/
+}
+
+#toc-text {
+	height: calc(100vh - 300px);
+	overflow: scroll;
+	display: block;
+}
+
+.toc-entry {
+	display: block;
+	padding-left: 9px;
+	border-left: 1px solid white;
+}
+
+.toc-entry:hover {
+	border-left: 1px solid gray;
+}
+
+.toc-selected {
+	border-left: 1px solid black;
+}
+
+.essay {
+	flex: 4;
+	display: flex;
+	overflow: scroll;
+	height: 100%;
+	padding: 25px 5vw;
+}
+
+.essay-only {
+	padding: 0 15vw 0 15px;
+	border-left: 1px solid gray;
+}
+
+.essay-orig, .essay-trans {
+	flex: 1;
+	padding: 0 15px;
+	border-left: 1px solid gray;
+}
+
+/*.essay-text {
+	padding: 0 15px;
+	border-left: 1px solid gray;
+}*/
+
+
+/*RESPONSIVE*/
+
+@media screen and (max-width: 1000px) {
+	.essay {
+		padding-right: 50px;
+		flex-direction: column-reverse;
+		flex: 2;
+	}
+
+	.essay-trans {
+		margin-bottom: 50px;
+	}
+
+	.essay-only {
+		padding: 0 5vw 0 10px;
+	}
+}
+
+@media screen and (max-width: 750px) {
+	#nav-button{
+		display: inline;
+		z-index: 6;
+	}
+
+	#nav {
+		visibility: hidden;
+		background-color: white;
+		border-left: 1px solid gray;
+		height: 100vh;
+		width: 65vw;
+		position: absolute;
+		top:0;
+		right:0;
+		z-index: 5;
+	}
+
+	#nav-inner {
+		height: 100px;
+		width: 200px;
+		margin: 10vh auto;
+		display: flex;
+		flex-direction: column;
+		vertical-align: middle;
+	}
+
+	#nav-inner a {
+		text-align: center;
+		font-size: 20px;
+		margin: 0 50px 0 0;
+	}
+
+	.header {
+		align-items: flex-start;
+	}
+
+	.essay {
+		padding: 0;
+	}
+}
+
+@media screen and (max-width: 725px) {
+	.essay {
+		padding-right: 0px;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.main {
+		display: block;
+	}
+
+	#nav {
+		border: none;
+		width: 100vw;
+	}
+
+	#nav-inner a {
+		margin: 0;
+		
+	}
+
+	.sidebar {
+		justify-content: flex-start;
+		height: 75px;
+	}
+
+	#toc-text {
+		display: none;
+		background-color: white;
+		height: calc(100% - 97px);
+		width: 100vw;
+		position: absolute;
+		top: 75px;
+		left: 0;
+		z-index: 1;
+		margin: 18px 40px;
+	}
+
+	.toc-entry {
+		margin: 0 50px 0 0;
+		width: 40vw;
+	}
+
+	.toc-title {
+		display: flex;
+		justify-content: space-between;
+		align-items: baseline;
+		height: 30px;
+	}
+
+	.essay-title {
+		height: 75px;
+	}
+
+	#toc-button {
+		display: inline;
+		z-index: 3
+	}
+
+	.essay {
+		height: calc(100vh - 166px);
+		padding-right: 50px;
+	}
+
+	.essay-orig, .essay-trans, .essay-only {
+		padding: 0 10px;
+	}
+
+	.essay-trans {
+		margin-bottom: 25px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.essay {
+		padding-right: 25px;
+	}
+}
+
+@media screen and (max-width: 350px) {
+	.header {
+		height: 40px;
+	}
+
+	.logo {
+		width: 50vw;
+	}
+
+	.essay {
+		padding-right: 0px;
+	}
+
+	#toc-text {
+		top: 85px;
+	}
+}
