@@ -551,10 +551,6 @@ body {
 		height: 30px;
 	}
 
-	.essay-title {
-		height: 75px;
-	}
-
 	#toc-button {
 		display: inline;
 		z-index: 3
