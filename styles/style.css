@@ -155,7 +155,7 @@ b, strong {
 	font-weight: 700;
 }
 
-p, h2, a {
+p, h2, a, h6 {
 	font-family: noto-sans, sans-serif;
 	font-weight: 400;
 	font-style: normal;
@@ -179,6 +179,11 @@ h3 {
 	padding: 0;
 }
 
+h6 {
+	font-size: .75em;
+	margin-top: 2em;
+}
+
 p {
 	margin: 0 0 1em 0;
 	padding: 0;
@@ -194,8 +199,13 @@ h1 {
 	font-size: 1.2em;
 }
 
-h2, h3 {
+h2 {
+	font-size: .9em;
+}
+
+h3 {
 	font-size: 1em;
+	line-height: 1.5;
 }
 
 a {
@@ -336,7 +346,13 @@ body {
 
 .essay-only {
 	padding: 0 15vw 0 15px;
-	border-left: 1px solid lightgray;
+	/*border-left: 1px solid red;*/
+}
+
+.about {
+	max-width: 450px;
+	margin: 0 auto;
+	padding-left: 100px;
 }
 
 .essay-orig, .essay-trans {
@@ -345,22 +361,25 @@ body {
 	/*border-left: 1px solid blue;*/
 }
 
-.essay-border {
+.essay-border, .essay-only-border {
 	position: absolute;
 	top: 90px;
 	left: calc(49vw - 271px);
-	width: calc(435px - 2vw);
 	height: calc(100vh - 130px);
+	width: calc(435px - 2vw);
 	border-left: 1px solid lightgray;
-	border-right: 1px solid lightgray;
 	z-index: -1;
+}
+
+.essay-border {
+	border-right: 1px solid lightgray;
 }
 
 
 /*RESPONSIVE*/
 
 @media screen and (max-width: 1275px) {
-	.essay-border {
+	.essay-border, .essay-only-border {
 		width: calc(35vw - 39px);
 		left: calc(26vw + 25px);
 	}
@@ -387,7 +406,7 @@ body {
 		border-left: 1px solid lightgray;
 	}
 
-	.essay-orig {
+	.essay-orig, .essay-only {
 		border-left: 1px solid lightgray;
 	}
 
@@ -396,7 +415,7 @@ body {
 		border-left: 1px solid lightgray;
 	}
 
-	.essay-border {
+	.essay-border, .essay-only-border {
 		border: none;
 	}
 }
@@ -441,6 +460,10 @@ body {
 
 	#essay {
 		padding: 0;
+	}
+
+	.about {
+		padding-left: 10px;
 	}
 }
 
@@ -529,14 +552,13 @@ body {
 }
 
 @media screen and (max-width: 450px) {
+
 	#essay {
 		padding-right: 25px;
 	}
-}
 
-@media screen and (max-width: 350px) {
 	.header {
-		height: 40px;
+		height: 60px;
 	}
 
 	.logo {
@@ -548,6 +570,6 @@ body {
 	}
 
 	#toc-text {
-		top: 85px;
+		top: 105px;
 	}
 }
