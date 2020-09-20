@@ -1,4 +1,5 @@
 /*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap');
 
 @font-face {
   font-family: noto-sans;
@@ -110,20 +111,44 @@
   font-weight: 700;
   font-style: normal;
   src: url(../fonts/NotoSansHebrew-Bold.ttf) format("truetype");
-}a
+}
 
+@font-face {
+  font-family: noto-sans-devanagari;
+  font-weight: 400;
+  font-style: normal;
+  src: url(../fonts/NotoSansDevanagari-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-devanagari;
+  font-weight: 500;
+  font-style: normal;
+  src: url(../fonts/NotoSansDevanagari-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: noto-sans-devanagari;
+  font-weight: 700;
+  font-style: normal;
+  src: url(../fonts/NotoSansDevanagari-Bold.ttf) format("truetype");
+}
 
 /*LANGUAGE FONTS*/
 .trad-chinese {
-	font-family: noto-sans-tc, sans-serif;
+	font-family: "Noto Sans TC", sans-serif;
 }
 
 .simp-chinese {
-	font-family: noto-sans-sc, sans-serif;
+	font-family: "Noto Sans SC", sans-serif;
 }
 
 .japanese {
-	font-family: noto-sans-jp, sans-serif;;
+	font-family: "Noto Sans JP", sans-serif;
+}
+
+.korean {
+	font-family: "Noto Sans KR", sans-serif;
 }
 
 .arabic {
@@ -135,6 +160,11 @@
 	font-family: noto-sans-hebrew, sans-serif;
 	text-align: right;
 }
+
+.devanagari {
+	font-family: noto-sans-devanagari, sans-serif;
+}
+
 
 /*TYPOGRAPHY*/
 
@@ -156,7 +186,6 @@ b, strong {
 }
 
 p, h2, a, h6 {
-	font-family: noto-sans, sans-serif;
 	font-weight: 400;
 	font-style: normal;
 	margin: 0;
@@ -164,7 +193,6 @@ p, h2, a, h6 {
 }
 
 h1, .logo, #nav {
-	font-family: noto-sans, sans-serif;
 	font-weight: 500;
 	font-style: normal;
 	margin: 0;
@@ -172,7 +200,6 @@ h1, .logo, #nav {
 }
 
 h3 {
-	font-family: noto-sans, sans-serif;
 	font-weight: 700;
 	font-style: normal;
 	margin: 0;
@@ -236,9 +263,6 @@ a:hover {
 
 /*STRUCTURE*/
 
-* {
-/*	border: 1px black solid;
-*/}
 body {
 	max-width: 1200px;
 	margin: 0 auto;
